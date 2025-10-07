@@ -18,11 +18,10 @@ cd ~/.local/share/redhwans-dotfiles
 ./setup.sh
 ```
 
-To install to a custom location, set the `INSTALL_REPO` environment variable:
+To install to a custom location, set the `INSTALL_DIR` environment variable:
 
 ```bash
-export INSTALL_REPO=~/my-custom-location
-curl -fsSL https://raw.githubusercontent.com/redhwannacef/dotfiles/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/redhwannacef/dotfiles/main/install.sh | INSTALL_DIR=~/my-custom-location bash
 ```
 
 ## Local Development
