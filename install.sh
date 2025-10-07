@@ -45,7 +45,7 @@ mkdir -p "$(dirname "$INSTALL_DIR")"
 
 # Clone the repository
 echo "Cloning repository from $REPO_URL..."
-git clone "$REPO_URL" "$INSTALL_DIR"
+git clone --quiet "$REPO_URL" "$INSTALL_DIR"
 echo -e "Repository cloned successfully!\n"
 
 # Run the setup script
