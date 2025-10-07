@@ -1,10 +1,34 @@
-# dotfiles
+# redhwans-dotfiles
 
 There are all the configuration files I need for my machine.
 
-## How to run
+## Installation
+
+To install from scratch, run:
 
 ```bash
+curl -fsSL https://raw.githubusercontent.com/redhwannacef/dotfiles/main/install.sh | bash
+```
 
-./link.sh
+Or clone and run manually:
+
+```bash
+git clone https://github.com/redhwannacef/dotfiles.git ~/.local/share/redhwans-dotfiles
+cd ~/.local/share/redhwans-dotfiles
+./setup.sh
+```
+
+To install to a custom location, set the `INSTALL_REPO` environment variable:
+
+```bash
+export INSTALL_REPO=~/my-custom-location
+curl -fsSL https://raw.githubusercontent.com/redhwannacef/dotfiles/main/install.sh | bash
+```
+
+## Local Development
+
+If you already have the repository cloned, run:
+
+```bash
+./setup.sh
 ```
