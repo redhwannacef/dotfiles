@@ -24,5 +24,8 @@ EOF
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 source "$DOTFILES_DIR/scripts/link.sh"
+source "$DOTFILES_DIR/scripts/git.sh"
 
 link_dotfiles "$DOTFILES_DIR"
+
+setup_git_user

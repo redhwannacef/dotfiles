@@ -1,0 +1,26 @@
+[include]
+  path = ~/.config/git/user-config
+[core]
+	autocrlf = input
+	excludesFile = ~/.gitignore
+	editor = nvim
+[submodule]
+	recurse = true
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[git]
+	inputValidationSubjectLength = 72
+[alias]
+	s = status -s
+	b = branch
+	c = commit
+	co = checkout
+	r = rebase
+  p = push
+  l = pull
+  d = diff
+  lo = log --graph --pretty='%Cred%h %Cgreen(%ad)%Creset - %s %C(bold blue)<%an>' --date=short
