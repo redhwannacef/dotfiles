@@ -22,5 +22,6 @@
 	r = rebase
   p = push
   l = pull
+  f = fetch --all -p
   d = diff
   lo = log --graph --pretty='%Cred%h %Cgreen(%ad)%Creset - %s %C(bold blue)<%an>' --date=short
