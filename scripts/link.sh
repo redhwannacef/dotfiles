@@ -15,6 +15,23 @@ _link_dotfile() {
   fi
 }
 
+# Action functions
+source_fish_config() {
+  echo "    - Sourcing fish config..."
+  fish -c "source ~/.config/fish/config.fish"
+}
+
+# Run post-link action if defined for this config
+_run_post_link_action() {
+  local config_name="$1"
+
+  case "$config_name" in
+    fish)
+      source_fish_config
+      ;;
+  esac
+}
+
 link_dotfiles() {
   local dotfiles_dir="$1"
 
@@ -23,7 +40,9 @@ link_dotfiles() {
   mkdir -p "$HOME/.config"
 
   for entry in "$dotfiles_dir/.config"/*; do
-    _link_dotfile "$entry" "$HOME/.config/$(basename "$entry")"
+    config_name="$(basename "$entry")"
+    _link_dotfile "$entry" "$HOME/.config/$config_name"
+    _run_post_link_action "$config_name"
   done
 
   echo -e "Linking complete\n"
