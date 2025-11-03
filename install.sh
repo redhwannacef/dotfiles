@@ -33,4 +33,4 @@ echo -e "Repository cloned successfully!\n"
 echo -e "Running setup script...\n"
 
 cd "$INSTALL_DIR"
-bash setup.sh --skip-banner
+bash setup.sh

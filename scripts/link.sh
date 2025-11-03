@@ -3,7 +3,7 @@
 # Safely link dotfiles from your repository to your home directory
 
 # Link files/directories only if they don't already exist
-link_dotfile() {
+_link_dotfile() {
   local src="$1"
   local dest="$2"
 
@@ -23,7 +23,7 @@ link_dotfiles() {
   mkdir -p "$HOME/.config"
 
   for entry in "$dotfiles_dir/.config"/*; do
-    link_dotfile "$entry" "$HOME/.config/$(basename "$entry")"
+    _link_dotfile "$entry" "$HOME/.config/$(basename "$entry")"
   done
 
   echo -e "Linking complete\n"
