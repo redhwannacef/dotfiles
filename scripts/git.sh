@@ -8,11 +8,15 @@ setup_git_user() {
 
   echo "Setting up Git user configuration"
 
+  # The ANSI escape codes are used to move the cursor up and clear the line so that it shows the entered value
   read -p "  - Enter your Git name (optional): " git_name
+  echo -ne "\033[1A\033[2K\r  - Enter your Git name (optional): $git_name\n"
   read -p "  - Enter your Git email (optional): " git_email
+  echo -ne "\033[1A\033[2K\r  - Enter your Git email (optional): $git_email\n"
 
   if [ -z "$git_name" ] && [ -z "$git_email" ]; then
-    echo "  - Skipping git user configuration"
+    echo -e "  - Skipping git user configuration"
+    echo -e "Git setup complete\n"
     return 0
   fi
 
