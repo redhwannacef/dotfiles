@@ -21,11 +21,12 @@ cat <<"EOF"
                                                                                                     
 EOF
 
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-source "$DOTFILES_DIR/scripts/link.sh"
-source "$DOTFILES_DIR/scripts/git.sh"
+source "$DOTFILES_DIR/scripts/helpers/detect_os.sh"
+source "$DOTFILES_DIR/scripts/packages.sh"
 
-link_dotfiles "$DOTFILES_DIR"
+OS=$(detect_os)
 
-setup_git_user
+setup_packages "$DOTFILES_DIR" "$XDG_CONFIG_HOME" "$OS"
