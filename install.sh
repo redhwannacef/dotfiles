@@ -73,4 +73,4 @@ echo -e "    - Repository cloned successfully"
 echo -e "Install Complete. Running setup script... \n"
 
 cd "$INSTALL_DIR"
-bash setup.sh
+bash scripts/setup.sh
