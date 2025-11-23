@@ -22,7 +22,7 @@ setup_packages() {
         install_packages "$(packages)"
 
       run_hook \
-        "    - Linking Config: $(packages)" \
+        "    - Linking Config: $(config_dir)" \
         link_config "$dotfiles_dir/.config/$(config_dir)" "$config_dir/$(config_dir)"
 
       run_hook \

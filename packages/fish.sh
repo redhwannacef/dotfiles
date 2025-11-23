@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 packages() {
-  echo "fish"
+  echo "fish fzf zoxide rg eza fd lazygit lazydocker"
 }
 
 config_dir() {

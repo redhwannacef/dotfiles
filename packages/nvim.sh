@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 packages() {
-  echo "nvim"
+  echo "nvim fzf lazygit lazydocker"
 }
 
 config_dir() {
