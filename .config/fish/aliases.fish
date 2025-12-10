@@ -21,7 +21,9 @@ alias n='npm'
 alias nr='npm run'
 
 alias gg='lazygit'
+alias lzg='lazygit'
 alias lzd='lazydocker'
+alias lzs='lazysql'
 
 alias ls="eza --icons --group-directories-first"
 alias l="ls -l"
