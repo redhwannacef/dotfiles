@@ -8,6 +8,11 @@ return {
             hidden = true,
           },
         },
+        formatters = {
+          file = {
+            filename_first = true,
+          },
+        },
       },
     },
   },
