@@ -19,6 +19,7 @@ alias gca='git commit --amend'
 
 alias n='npm'
 alias nr='npm run'
+alias nrd='npm run dev'
 
 alias gg='lazygit'
 alias lzg='lazygit'

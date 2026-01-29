@@ -1,3 +1,4 @@
+source $__fish_config_dir/config.local.fish
 source $__fish_config_dir/aliases.fish
 
 zoxide init fish | source
