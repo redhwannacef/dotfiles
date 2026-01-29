@@ -23,7 +23,7 @@ setup_packages() {
 
       run_hook \
         "    - Linking Config: $(packages)" \
-        link_config "$dotfiles_dir/.config" "$config_dir/$(config_dir)"
+        link_config "$dotfiles_dir/.config/$(config_dir)" "$config_dir/$(config_dir)"
 
       run_hook \
         "    - Running setup for $config_name" \

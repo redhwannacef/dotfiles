@@ -22,7 +22,9 @@ cat <<"EOF"
 EOF
 
 XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+mkdir -p "$XDG_CONFIG_HOME"
 
 source "$DOTFILES_DIR/scripts/helpers/detect_os.sh"
 source "$DOTFILES_DIR/scripts/packages.sh"
